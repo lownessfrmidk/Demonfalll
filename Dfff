@@ -1,0 +1,73 @@
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/Arceus-X-UI-Library/main/source.lua"))()
+lib:SetTitle("LowHub")
+lib:SetIcon("http://www.roblox.com/asset/?id=9178187770")
+local a = workspace.Gravity
+
+lib:SetTheme("Default")
+
+-- Reset Character Button
+lib:AddButton("Reset char", function()
+    local player = game.Players.LocalPlayer
+    if player.Character and player.Character:FindFirstChild("Head") then
+        player.Character.Head:Destroy()
+    else
+        warn("Character or Head not found!")
+    end
+end)
+
+-- Moon Gravity Toggle
+lib:AddToggle("Toggle Moon Gravity", function(state)
+    if state then
+        workspace.Gravity = 60
+    else
+        workspace.Gravity = a
+    end
+end, false)
+
+-- Dupe Wipe Potions
+lib:AddButton("Dupe wipe potions", function()
+    local args = {
+        [1] = "HUD",
+        [2] = "Inventory",
+        [3] = "Drop",
+        [4] = "Wipe Potion",
+        [5] = -9000
+    }
+    game:GetService("ReplicatedStorage").Remotes.Sync:InvokeServer(unpack(args))
+end)
+
+-- Dupe Muzan Blood
+lib:AddButton("Dupe muzan blood", function()
+    local args = {
+        [1] = "HUD",
+        [2] = "Inventory",
+        [3] = "Drop",
+        [4] = "Muzan Blood",
+        [5] = -9000
+    }
+    game:GetService("ReplicatedStorage").Remotes.Sync:InvokeServer(unpack(args))
+end)
+
+-- Dupe Combat Potions
+lib:AddButton("Dupe Combat potions", function()
+    local args = {
+        [1] = "HUD",
+        [2] = "Inventory",
+        [3] = "Drop",
+        [4] = "Combat Potion",
+        [5] = -9000
+    }
+    game:GetService("ReplicatedStorage").Remotes.Sync:InvokeServer(unpack(args))
+end)
+
+-- Dupe Demon Horn
+lib:AddButton("Dupe Demon Horn", function()
+    local args = {
+        [1] = "HUD",
+        [2] = "Inventory",
+        [3] = "Drop",
+        [4] = "Demon Horn",
+        [5] = -9000
+    }
+    game:GetService("ReplicatedStorage").Remotes.Sync:InvokeServer(unpack(args))
+end)
