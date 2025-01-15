@@ -1,7 +1,7 @@
 local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/Arceus-X-UI-Library/main/source.lua"))()
 lib:SetTitle("LowHub")
 lib:SetIcon("http://www.roblox.com/asset/?id=9178187770")
-local a = workspace.Gravity
+local defaultGravity = workspace.Gravity
 
 lib:SetTheme("Default")
 
@@ -20,12 +20,12 @@ lib:AddToggle("Toggle Moon Gravity", function(state)
     if state then
         workspace.Gravity = 60
     else
-        workspace.Gravity = a
+        workspace.Gravity = defaultGravity
     end
 end, false)
 
 -- Dupe Wipe Potions
-lib:AddButton("Dupe wipe potions", function()
+lib:AddButton("Dupe Wipe Potions", function()
     local args = {
         [1] = "HUD",
         [2] = "Inventory",
@@ -37,7 +37,7 @@ lib:AddButton("Dupe wipe potions", function()
 end)
 
 -- Dupe Muzan Blood
-lib:AddButton("Dupe muzan blood", function()
+lib:AddButton("Dupe Muzan Blood", function()
     local args = {
         [1] = "HUD",
         [2] = "Inventory",
@@ -49,7 +49,7 @@ lib:AddButton("Dupe muzan blood", function()
 end)
 
 -- Dupe Combat Potions
-lib:AddButton("Dupe Combat potions", function()
+lib:AddButton("Dupe Combat Potions", function()
     local args = {
         [1] = "HUD",
         [2] = "Inventory",
@@ -102,14 +102,14 @@ lib:AddButton("Dupe Sun Ore", function()
         [1] = "HUD",
         [2] = "Inventory",
         [3] = "Drop",
-        [4] = "Sun Ore"
+        [4] = "Sun Ore",
         [5] = -9000
     }
     game:GetService("ReplicatedStorage").Remotes.Sync:InvokeServer(unpack(args))
 end)
 
 -- Dupe Perfect Crystal
-lib:AddButton("Perfect Crystal", function()
+lib:AddButton("Dupe Perfect Crystal", function()
     local args = {
         [1] = "HUD",
         [2] = "Inventory",
@@ -121,7 +121,7 @@ lib:AddButton("Perfect Crystal", function()
 end)
 
 -- Dupe Broken Nichirin
-lib:AddButton("Broken Nichirin", function()
+lib:AddButton("Dupe Broken Nichirin", function()
     local args = {
         [1] = "HUD",
         [2] = "Inventory",
