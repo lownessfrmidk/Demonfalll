@@ -71,3 +71,63 @@ lib:AddButton("Dupe Demon Horn", function()
     }
     game:GetService("ReplicatedStorage").Remotes.Sync:InvokeServer(unpack(args))
 end)
+
+-- Dupe Crystal Key
+lib:AddButton("Dupe Crystal Key", function()
+    local args = {
+        [1] = "HUD",
+        [2] = "Inventory",
+        [3] = "Drop",
+        [4] = "Crystal Key",
+        [5] = -9000
+    }
+    game:GetService("ReplicatedStorage").Remotes.Sync:InvokeServer(unpack(args))
+end)
+
+-- Dupe Crystal Essence
+lib:AddButton("Dupe Crystal Essence", function()
+    local args = {
+        [1] = "HUD",
+        [2] = "Inventory",
+        [3] = "Drop",
+        [4] = "Crystal Essence",
+        [5] = -9000
+    }
+    game:GetService("ReplicatedStorage").Remotes.Sync:InvokeServer(unpack(args))
+end)
+
+-- Dupe Sun Ore
+lib:AddButton("Dupe Sun Ore", function()
+    local args = {
+        [1] = "HUD",
+        [2] = "Inventory",
+        [3] = "Drop",
+        [4] = "Sun Ore"
+        [5] = -9000
+    }
+    game:GetService("ReplicatedStorage").Remotes.Sync:InvokeServer(unpack(args))
+end)
+
+-- Dupe Perfect Crystal
+lib:AddButton("Perfect Crystal", function()
+    local args = {
+        [1] = "HUD",
+        [2] = "Inventory",
+        [3] = "Drop",
+        [4] = "Perfect Crystal",
+        [5] = -9000
+    }
+    game:GetService("ReplicatedStorage").Remotes.Sync:InvokeServer(unpack(args))
+end)
+
+-- Dupe Broken Nichirin
+lib:AddButton("Broken Nichirin", function()
+    local args = {
+        [1] = "HUD",
+        [2] = "Inventory",
+        [3] = "Drop",
+        [4] = "Broken Nichirin",
+        [5] = -9000
+    }
+    game:GetService("ReplicatedStorage").Remotes.Sync:InvokeServer(unpack(args))
+end)
