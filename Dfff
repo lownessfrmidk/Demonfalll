@@ -131,3 +131,13 @@ lib:AddButton("Dupe Broken Nichirin", function()
     }
     game:GetService("ReplicatedStorage").Remotes.Sync:InvokeServer(unpack(args))
 end)
+
+-- God Mode
+lib:AddButton("God Mode", function()
+    local args = {
+        [1] = "Character",
+        [2] = "FallDamageServer",
+        [3] = 0/0
+    }
+    game:GetService("ReplicatedStorage").Remotes.Async:FireServer(unpack(args))
+end)
